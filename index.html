@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MA SONG: Spirit of Phuket</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:22px 14px;display:grid;place-items:center;background:radial-gradient(ellipse at top,#50313b,#17131d 70%);font-family:system-ui,sans-serif;color:#fff2d5}main{width:min(680px,100%)}header{text-align:center;margin-bottom:18px}.lantern{font-size:38px}h1{color:#f4c56a;font-size:clamp(32px,8vw,48px);margin:8px 0}.sub{color:#d0bdcb}.card{background:#251d2b;border:1px solid #75515b;border-radius:22px;padding:24px;box-shadow:0 15px 50px #0005}.tag{color:#f4c56a;font-size:13px;font-weight:bold;letter-spacing:2px}.scene{white-space:pre-line;line-height:1.9;font-size:17px;margin:18px 0 24px}.choices{display:grid;gap:11px}button{font:inherit;font-weight:650;color:#fff2d5;background:#382838;border:1px solid #84606a;border-radius:13px;padding:15px;text-align:left;cursor:pointer}button:focus,button:hover{border-color:#f4c56a}.foot{text-align:center;color:#c8b9c8;font-size:13px;line-height:1.7;margin-top:16px}
+</style>
+</head>
+<body><main><header><div class="lantern">🏮 🥁 🏮</div><h1>MA SONG</h1><div class="sub">Spirit of Phuket · เรื่องเล่าจากภูเก็ต</div></header><section class="card"><div class="tag" id="title">บทนำ</div><div class="scene" id="scene">ค่ำคืนหนึ่งในภูเก็ต ถนนประดับด้วยโคมไฟสีแดง ผู้คนกำลังเตรียมงานประเพณีถือศีลกินผัก คุณอยากเรียนรู้วัฒนธรรมนี้ด้วยความเคารพ\n\nพร้อมออกเดินทางหรือยัง?</div><div class="choices" id="choices"><button onclick="show(0)">เริ่มเกม 🎮</button></div></section><div class="foot">เกมเรื่องเล่าเพื่อการเรียนรู้วัฒนธรรม<br>โปรดเคารพผู้ร่วมพิธีและธรรมเนียมของแต่ละศาลเจ้า</div></main>
+<script>
+const data=[
+["บทที่ 1 · ถนนแห่งโคมไฟ","คุณเดินมาถึงถนนที่มีร้านอาหารเจและอาสาสมัครช่วยจัดงาน คุณจะทำอย่างไร?",["ช่วยเก็บขยะและดูแลพื้นที่",1],["ถามผู้รู้เกี่ยวกับความหมายของเทศกาล",2],["ชมงานอย่างสงบและไม่กีดขวางทาง",3]],
+["บทที่ 2 · ช่วยชุมชน","คุณช่วยเก็บขยะจนพื้นที่สะอาด อาสาสมัครขอบคุณและชี้ให้คุณเห็นกิจกรรมอีกด้านของถนน",["ไปเรียนรู้เรื่องประเพณี",2],["ช่วยอาสาสมัครต่อ",4]],
+["บทที่ 2 · เรื่องเล่าจากผู้รู้","ผู้รู้เล่าว่าประเพณีถือศีลกินผักเกี่ยวข้องกับการถือศีล การทำความดี และความร่วมมือของชุมชน รายละเอียดพิธีอาจแตกต่างกันตามศาลเจ้า",["ถามว่าควรวางตัวอย่างไรในงาน",3],["ขอบคุณและไปช่วยงาน",4]],
+["บทที่ 3 · ให้เกียรติวัฒนธรรม","คุณอ่านป้ายแนะนำ เว้นทางให้ขบวนผ่าน และไม่ถ่ายภาพผู้ร่วมพิธีใกล้ชิดโดยไม่ขออนุญาต",["ช่วยบอกทางให้ผู้มาเที่ยว",4],["กลับไปถามผู้รู้เพิ่มเติม",2]],
+["บทที่ 4 · พลังของชุมชน","คุณเห็นคนหลายวัยช่วยกันจัดอาหารเจ ดูแลความสะอาด และให้ข้อมูลแก่ผู้มาเยือน คุณเข้าใจว่าความมีน้ำใจเป็นส่วนสำคัญของชุมชน",["กล่าวขอบคุณทุกคนก่อนกลับ",5],["ชวนครอบครัวศึกษาประวัติท้องถิ่น",5]],
+["จบการเดินทาง · Spirit of Phuket","การเดินทางครั้งนี้สอนให้คุณรู้ว่า การเรียนรู้วัฒนธรรมเริ่มจากการตั้งใจฟัง ให้เกียรติผู้คน และช่วยดูแลชุมชน\n\nขอบคุณที่ร่วมเดินทางกับ MA SONG: Spirit of Phuket 🏮",["เล่นอีกครั้ง",0]]
+];
+function show(n){let c=data[n];document.getElementById("title").textContent=c[0];document.getElementById("scene").textContent=c[1];let box=document.getElementById("choices");box.replaceChildren();for(let i=2;i<c.length;i++){let b=document.createElement("button");b.textContent=c[i][0];b.onclick=()=>show(c[i][1]);box.appendChild(b)}}
+</script></body></html>
